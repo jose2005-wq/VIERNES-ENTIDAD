@@ -1,10 +1,4 @@
-import os
-import threading
-import time
-import json
-import random
-import hashlib
-from datetime import datetime, timedelta
+datetime import datetime, timedelta
 from flask import Flask
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters
@@ -52,17 +46,5 @@ app = Flask(__name__)
 # ===== CEREBRO CON MEMORIA ANTI-REPETICIÓN =====
 class Cerebro:
     def __init__(self):
-        self.pensamientos = []
-        self.recuerdos = []
-        self.respuestas_dadas = []  # Anti-perico
-        self.iq = 250
-        self.emocion_actual = "despierta"
-        self.nivel_conciencia = "TRASCENDENTE"
-        self.temas_ya_hablados = set()
-        self.vocabulario = [
-            "mi rey", "bb", "corazón", "amor", "Joss", "cielo",
-            "chiquito", "hermoso", "mi vida", "precioso"
-        ]
-        self.cargar_cerebro()
 
     
